@@ -30,18 +30,21 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a href="#" class="navigation-link search">
+            <a href="" class="navigation-link search">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link add-favorites">
+            <a href="" class="navigation-link favorites">
               <span class="visually-hidden">Избранное</span>
-              <span class="visually-hidden">12 товаров в избранном</span>
+              <div class="favorites-added">
+                <span class="visually-hidden">Гостиниц в избранном:</span>
+                <span class="favorites-counter">12</span>
+              </div>
             </a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link button search-button">
+            <a href="catalog.html" class="navigation-link button search-button">
               Хочу сюда
             </a>
           </li>
@@ -63,7 +66,7 @@
         </ul>
       </header>
       <section class="catalog-search-form">
-        <h2>Подбор гостинцы</h2>
+        <h2 class="visually-hidden">Подбор гостиницы</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">
@@ -127,6 +130,9 @@
               <input class="control-input" type="text" name="max-price" placeholder="9000">
               До
             </label>
+            <label class="control">
+              <input class="control-input" type="range" min="0" max="9000">
+            </label>
           </fieldset>
           <button class="filter-button button " type="submit">Применить</button>
           <a class="reset-link" href="#">Сбросить</a>
@@ -136,22 +142,22 @@
         <h2 class="result-title">Найдено гостиниц: 38</h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала популярное</option>
-          <option value="cheap">Сначала дешёвое</option>
+          <option value="cheap" selected>Сначала дешёвое</option>
           <option value="expensive">Сначала дорогое</option>
         </select>
         <ul class="view-switcher-list">
           <li class="view-switcher-item">
-            <a href="#" class="view-button button-active button">
+            <a href="#" class="button view-button button-active">
               <span class="visually-hidden">Показать таблицей</span>
             </a>
           </li>
           <li class="view-item">
-            <a class="view-button button" href="#">
+            <a class="button view-button" href="#">
               <span class="visually-hidden">Показать слайдшоу</span>
             </a>
           </li>
           <li class="view-item">
-            <a class="view-button button" href="#">
+            <a class="button view-button" href="#">
               <span class="visually-hidden">Показать списком</span>
             </a>
           </li>
@@ -230,12 +236,9 @@
           <span class="hotel-counter-title">Гостиниц на странице</span>
           <select class="select-control" aria-label="Количество элементов на странице">
             <option value="4">4</option>
-            <option value="6">6</option>
           </select>
         </label>
       </section>
-    </main>
-    <footer class="page-footer">
       <section class="newsletter">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
         <p class="newsletter-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -247,6 +250,8 @@
           <button class="button subscribe-button">Подписаться</button>
         </form>
       </section>
+    </main>
+    <footer class="page-footer">
       <h2 class="visually-hidden">Контакты</h2>
       <section class="footer-social">
         <h3 class="visually-hidden">Наши социальные сети</h3>
@@ -273,7 +278,7 @@
         <a href="tel:+78128121212" class="footer-tel">+7 (812) 812-12-12</a>
       </section>
       <section class="footer-copyright">
-        <h3 class="visually-hidden">Сайт сделан:</h3>
+        <h3 class="visually-hidden">Сайт сделан</h3>
         <a href="https://htmlacademy.ru" class="copyright-logo"></a>
       </section>
     </footer>
