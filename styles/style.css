@@ -68,7 +68,7 @@ body {
   background-color: #82B3D3;
 }
 
-.filter-button {
+.filter-form-button {
   color: #fff;
   background-color: #82B3D3;
 }
@@ -98,7 +98,7 @@ body {
   font-weight: 700;
 }
 
-.filter-title {
+.hotel-filter-title {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -172,7 +172,7 @@ body {
 
 /* ФИЛЬТР */
 
-.inner-header {
+.hotel-filter {
   background-image: url("../images/filter-background.jpg");
   color: #fff;
   background-color: #82B3D3;
@@ -187,7 +187,7 @@ body {
   color: #fff;
 }
 
-.catalog-filter-title {
+.filter-form-title {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -238,7 +238,3 @@ body {
   text-decoration: none;
 }
 
-.social-link, .view-button {
-  text-decoration: none;
-  color: inherit;
-}

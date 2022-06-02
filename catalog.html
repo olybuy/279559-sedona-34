@@ -52,96 +52,93 @@
       </nav>
     </header>
 
-    <!-- ФИЛЬТР -->
     <main class="main-inner">
-      <div class="inner-header">
-        <section class="filter-header">
-          <h1 class="filter-title">Гостиницы Седоны</h1>
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs-item">
-              <a href="index.html" class="breadcrumbs-link">
-                <span class="visually-hidden">Главная</span>
-              </a>
-            </li>
-            <li class="breadcrumbs-item">
-              <a>Гостиницы</a>
-            </li>
-          </ol>
-        </section>
-        <section class="catalog-search-form">
-          <h2 class="visually-hidden">Подбор гостиницы</h2>
-          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">
-                Инфраструктура:
-              </legend>
-              <ul class="catalog-filter-list">
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="control-input" type="checkbox" name="pool" checked>
-                     Бассейн
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="control-input" type="checkbox" name="parking" checked>
-                    Паркинг
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="control-input" type="checkbox" name="wi-fi">
-                    Wi-Fi
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">
-                Тип Жилья:
-              </legend>
-              <ul class="catalog-filter-list">
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="control-input" type="radio" name="accommodation-type" value="hotel" checked>
-                    Гостиница
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="control-input" type="radio" name="accommodation-type" value="motel">
-                    Мотель
-                  </label>
-                </li>
-                <li class="catalog-filter-item">
-                  <label class="control">
-                    <input class="control-input" type="radio" name="accommodation-type" value="apartments">
-                    Апартаменты
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">
-                Стоимость, ₽:
-              </legend>
-              <label class="control min-price">
-                От
-                <input class="control-input" type="text" name="min-price" placeholder="0">
-              </label>
-              <label class="control max-price">
-                До
-                <input class="control-input" type="text" name="max-price" placeholder="9000">
-              </label>
-              <label class="control">
-                <input class="control-input" type="range" min="0" max="9000">
-              </label>
-            </fieldset>
-            <button class="filter-button button" type="submit">Применить</button>
-            <a class="reset-link" href="#">Сбросить</a>
-          </form>
-        </section>
-      </div>
+
+      <!-- ФИЛЬТР -->
+      <section class="hotel-filter">
+        <h1 class="hotel-filter-title">Гостиницы Седоны</h1>
+        <ol class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a href="index.html" class="breadcrumbs-link">
+              <span class="visually-hidden">Главная</span>
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a>Гостиницы</a>
+          </li>
+        </ol>
+        <h2 class="visually-hidden">Подбор гостиницы</h2>
+        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="filter-form-group">
+            <legend class="filter-form-title">
+              Инфраструктура:
+            </legend>
+            <ul class="filter-form-list">
+              <li class="filter-form-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="pool" checked>
+                   Бассейн
+                </label>
+              </li>
+              <li class="filter-form-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="parking" checked>
+                  Паркинг
+                </label>
+              </li>
+              <li class="filter-form-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="wi-fi">
+                  Wi-Fi
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-form-group">
+            <legend class="filter-form-title">
+              Тип Жилья:
+            </legend>
+            <ul class="filter-form-list">
+              <li class="filter-form-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="accommodation-type" value="hotel" checked>
+                  Гостиница
+                </label>
+              </li>
+              <li class="filter-form-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="accommodation-type" value="motel">
+                  Мотель
+                </label>
+              </li>
+              <li class="filter-form-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="accommodation-type" value="apartments">
+                  Апартаменты
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-form-group">
+            <legend class="filter-form-title">
+              Стоимость, ₽:
+            </legend>
+            <label class="control min-price">
+              От
+              <input class="control-input" type="text" name="min-price" placeholder="0">
+            </label>
+            <label class="control max-price">
+              До
+              <input class="control-input" type="text" name="max-price" placeholder="9000">
+            </label>
+            <label class="control">
+              <input class="control-input" type="range" min="0" max="9000">
+            </label>
+          </fieldset>
+          <button class="filter-form-button button" type="submit">Применить</button>
+          <a class="reset-link" href="#">Сбросить</a>
+        </form>
+      </section>
 
       <!-- РЕЗУЛЬТАТЫ ПОИСКА -->
       <section class="catalog-search-results">
@@ -170,10 +167,12 @@
             </a>
           </li>
         </ul>
+
+        <!-- ГОСТИНИЦЫ -->
         <ul class="hotel-list">
           <li class="hotel-item">
             <a href="#" class="hotel-link">
-              <img src="images/hotels/hotel-1.jpg" width="300" height="211" alt="красивый вид из пещеры на звездное небо" class="hotel-image">
+              <img src="images/hotels/hotel-1-1.jpg" width="300" height="211" alt="красивый вид из пещеры на звездное небо" class="hotel-image">
               <h3 class="hotel-name">Amara Resort & Spa</h3>
             </a>
             <dl>
@@ -190,7 +189,7 @@
           </li>
           <li class="hotel-item">
             <a href="#" class="hotel-link">
-              <img src="images/hotels/hotel-1-1.jpg" width="300" height="211" alt="горный хребет, над которым радуга" class="hotel-image">
+              <img src="images/hotels/hotel-1-2.jpg" width="300" height="211" alt="горный хребет, над которым радуга" class="hotel-image">
               <h3 class="hotel-name">Villas at Poco Diablo</h3>
             </a>
             <dl>
@@ -207,7 +206,7 @@
           </li>
           <li class="hotel-item">
             <a href="#" class="hotel-link">
-              <img src="images/hotels/hotel-1-2.jpg" width="300" height="211" alt="скала в пустыне" class="hotel-image">
+              <img src="images/hotels/hotel-1-3.jpg" width="300" height="211" alt="скала в пустыне" class="hotel-image">
               <h3 class="hotel-name">Desert Quail Inn</h3>
             </a>
             <dl>
@@ -224,7 +223,7 @@
           </li>
           <li class="hotel-item">
             <a href="#" class="hotel-link">
-              <img src="images/hotels/hotel-1-3.jpg" width="300" height="211" alt="горная гряда на закате" class="hotel-image">
+              <img src="images/hotels/hotel-1.jpg" width="300" height="211" alt="горная гряда на закате" class="hotel-image">
               <h3 class="hotel-name">GreenTree Inn</h3>
             </a>
             <dl>
