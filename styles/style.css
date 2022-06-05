@@ -1,0 +1,286 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+}
+
+/* НАВИГАЦИЯ */
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+/* КНОПКИ */
+
+.button {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.navigation-search-button {
+  background-color: #756157;
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-form-button {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background-color: #756157;
+}
+
+.subscribe-button {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #82B3D3;
+}
+
+.filter-form-button {
+  color: #fff;
+  background-color: #82B3D3;
+}
+
+.reset-link {
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #82B3D3;
+}
+
+.hotel-about-button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #756157;
+}
+
+.hotel-favorites-button {
+  background-color: #82B3D3;
+  color: #fff;
+}
+
+.added-favorites-button {
+  background-color: #7DB54F;
+  color: #fff;
+}
+
+/* ЗАГОЛОВКИ */
+
+.title {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.advantages-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.hotel-filter-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #82B3D3;
+}
+
+.hotel-name {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+/* ОПИСАНИЯ */
+
+.advantages-desc {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* ГЛАВНАЯ СТРАНИЦА */
+
+.main-header {
+  background-image: url("../images/index-background.jpg");
+  color: #000;
+  background-color: #fff;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.advantages {
+  text-align: center;
+}
+
+.search-form {
+  text-align: center;
+}
+
+/* ПРЕИМУЩЕСТВА */
+
+.true-town {
+  color: #fff;
+  background-color: #82B3D3;
+}
+
+.devil-bridge {
+  color: #fff;
+  background-color: #82B3D3;
+}
+
+.small-square {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.few-tourists {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.beautiful-road {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.motel {
+  color: #000;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.food {
+  color: #000;
+  background-color: #fff;
+}
+
+.souvenirs {
+  color: #000;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+/* РАССЫЛКА */
+
+.newsletter {
+  background-image: url("../images/newsletter-background.jpg");
+  color: #fff;
+  background-color: #82B3D3;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.newsletter-inner {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* ФИЛЬТР */
+
+.hotel-filter {
+  background-image: url("../images/filter-background.jpg");
+  color: #fff;
+  background-color: #82B3D3;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+}
+
+.filter-form-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.filter-form-item {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hotel-counter-title {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* КАРТОЧКА ОТЕЛЯ */
+
+.hotel-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hotel-price-list {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.hotel-rating {
+  background-color: #F2F2F2;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* ПАГИНАЦИЯ */
+
+.pagination-link {
+  text-decoration: none;
+  color: #fff;
+  background-color: #82B3D3;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-current {
+  color: #000;
+  background-color: #F2F2F2;
+}
+
+/* ПОДВАЛ */
+
+.footer-tel {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+}
+
