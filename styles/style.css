@@ -156,39 +156,43 @@ body {
 
 /* ПРЕИМУЩЕСТВА */
 
-.true-town {
+.advantages-list li:nth-child(1) {
   color: #fff;
   background-color: #82B3D3;
 }
 
-.devil-bridge {
+.advantages-list li:nth-child(2) {
   color: #fff;
   background-color: #82B3D3;
 }
 
-.small-square {
+.advantages-list li:nth-child(3) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.few-tourists {
+.advantages-list li:nth-child(4) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.beautiful-road {
+.advantages-list li:nth-child(5) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.motel {
+.features-list {
+  background-color: #fff;
+}
+
+.features-list li:nth-child(1) {
   color: #000;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.food {
+.features-list li:nth-child(2) {
   color: #000;
   background-color: #fff;
 }
 
-.souvenirs {
+.features-list li:nth-child(3) {
   color: #000;
   background-color: rgba(131, 179, 211, 0.12);
 }
