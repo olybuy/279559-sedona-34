@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
+  <div class="container">
 
     <!-- ШАПКА -->
     <header class="page-header">
@@ -51,7 +52,7 @@
         </ul>
       </nav>
     </header>
-    <main class="main-index">
+    <main class="main-container main-index">
 
       <!-- ПРОМО-БЛОК -->
       <header class="main-header">
@@ -61,9 +62,11 @@
 
       <!-- ПРЕИМУЩЕСТВА -->
       <section class="advantages">
-        <h2 class="visually-hidden">Преимущества отдыха в Седоне</h2>
-        <p class="advantages-main-title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p class="advantages-main-desc">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        <div class="promo-wrapper">
+          <h2 class="visually-hidden">Преимущества отдыха в Седоне</h2>
+          <p class="advantages-main-title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="advantages-main-desc">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
         <ol class="advantages-list">
           <li class="advantages-item true-town">
             <h3 class="advantages-title">Настоящий городок</h3>
@@ -111,16 +114,20 @@
 
       <!-- ПОИСК ГОСТИНИЦЫ -->
       <section class="search-form">
-        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-        <p class="search-form-title title">Заинтересовались?</p>
-        <p class="search-form-desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a href="#" class="button search-form-button">Поиск гостиницы в Cедоне</a>
+        <div class="search-form-wrapper">
+          <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+          <p class="search-form-title title">Заинтересовались?</p>
+          <p class="search-form-desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <a href="#" class="button search-form-button">Поиск гостиницы в Cедоне</a>
+        </div>
       </section>
 
       <!-- РАССЫЛКА -->
       <section class="newsletter">
-        <h2 class="newsletter-title title">Подпишитесь на рассылку</h2>
-        <p class="newsletter-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <div class="newsletter-wrapper">
+          <h2 class="newsletter-title title">Подпишитесь на рассылку</h2>
+          <p class="newsletter-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        </div>
         <form action="https://echo.htmlacademy.ru/" method="post" class="newsletter-form">
           <label class="newsletter-label">
             <span class="visually-hidden">Введите ваш e-mail:</span>
@@ -165,5 +172,6 @@
         </a>
       </section>
     </footer>
+  </div>
   </body>
 </html>
