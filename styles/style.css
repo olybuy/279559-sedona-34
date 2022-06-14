@@ -180,6 +180,8 @@ button, input {
 
 .logo img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .navigation {
@@ -362,7 +364,14 @@ button, input {
   display: flex;
 }
 
+.true-town-image img {
+  max-width: 100%;
+  height: auto;
+}
+
 .true-town-content {
+  width: 400px;
+  box-sizing: border-box;
   padding: 85px;
 }
 
@@ -374,6 +383,11 @@ button, input {
 
 .devil-bridge-wrapper {
   padding: 85px;
+}
+
+.devil-bridge img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ЗАИНТЕРЕСОВАЛИСЬ */
@@ -585,6 +599,8 @@ button, input {
 .hotel-image {
   display: block;
   margin-bottom: 16px;
+  max-width: 100%;
+  height: auto;
 }
 
 .hotel-link {
