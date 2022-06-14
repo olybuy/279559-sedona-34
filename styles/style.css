@@ -292,26 +292,17 @@ button, input {
   list-style: none;
 }
 
-.advantages-list li:nth-child(1) {
+.advantages-list li:nth-child(-n+2) {
   color: #fff;
   background-color: #82B3D3;
 }
 
-.advantages-list li:nth-child(2) {
-  color: #fff;
-  background-color: #82B3D3;
-}
-
-.advantages-list li:nth-child(3) {
+.advantages-list li:nth-child(2n+3) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-list li:nth-child(4) {
+.advantages-list li:nth-child(2n+4) {
   background-color: rgba(131, 179, 211, 0.12);
-}
-
-.advantages-list li:nth-child(5) {
-  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-item {
@@ -327,6 +318,7 @@ button, input {
 
 .advantages-more {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -337,22 +329,18 @@ button, input {
 }
 
 .features-list {
-  background-color: #fff;
-}
-
-.features-list li:nth-child(1) {
-  color: #000;
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.features-list li:nth-child(2) {
   color: #000;
   background-color: #fff;
 }
 
-.features-list li:nth-child(3) {
-  color: #000;
+.features-list li:nth-child(odd) {
+  color: inherit;
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.features-list li:nth-child(even) {
+  color: inherit;
+  background-color: #fff;
 }
 
 .true-town {
@@ -555,6 +543,7 @@ button, input {
 
 .view-switcher-list {
   display: flex;
+  flex-wrap: wrap;
   width: 160px;
   margin: 0;
   padding: 0;
@@ -572,7 +561,7 @@ button, input {
   margin-right: 8px;
 }
 
-.view-item:last-child {
+.view-item:nth-child(3n) {
   margin-right: 0;
 }
 
@@ -636,6 +625,7 @@ button, input {
 
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   width: 400px;
   margin: 0;
   padding: 0;
