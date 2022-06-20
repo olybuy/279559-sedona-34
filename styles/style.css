@@ -461,6 +461,7 @@ button, input {
 
 .filter-form {
   display: flex;
+  justify-content: space-between;
   padding-bottom: 70px;
 }
 
@@ -494,23 +495,28 @@ button, input {
 }
 
 .infrastructure {
-  width: 160px;
-  margin-right: 70px;
+  width: auto;
 }
 
 .hotel-type {
-  width: 160px;
-  margin-right: 175px;
+  width: auto;
 }
 
 .price-choice {
-  width: 288px;
-  margin-right: 70px;
+  width: auto;
 }
 
 .price-controls {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+}
+
+.price-control input {
+  height: 48px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
 }
 
 .range {
@@ -523,6 +529,8 @@ button, input {
 
 .filter-buttons {
   width: 160px;
+  text-align: center;
+  align-self: end;
 }
 
 .filter-form-button {
@@ -530,7 +538,10 @@ button, input {
   color: #fff;
   background-color: #82B3D3;
   border: 0;
+  width: 130px;
   padding: 14px 15px;
+  margin-bottom: 20px;
+  box-sizing: content-box;
 }
 
 .reset-link {
