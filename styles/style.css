@@ -341,6 +341,10 @@ button, input {
   text-decoration: none;
   color: #fff;
   background-color: #756157;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  width: 574px;
+  margin: 0 auto;
 }
 
 /* РАССЫЛКА */
@@ -519,6 +523,9 @@ button, input {
   border: 1px solid #fff;
   color: #fff;
   background-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 142px;
 }
 
 .range {
