@@ -1,26 +1,10 @@
 /* OUTLINES */
 
-.view-switcher-wrapper {
-  outline: #ff00ff 2px solid;
-}
-
-.pagination-wrapper {
-  outline: #ff00ff 2px solid;
-}
-
 .pagination-list {
   outline: #00ff00 2px solid;
 }
 
 .hotel-counter {
-  outline: #00ff00 2px solid;
-}
-
-.view-switcher-list {
-  outline: #00ff00 2px solid;
-}
-
-.navigation-link {
   outline: #00ff00 2px solid;
 }
 
@@ -36,14 +20,18 @@
   outline: #00ff00 2px solid;
 }
 
-.hotel-item {
-  outline: #0000ff 2px solid;
-}
-
-.filter-form-group {
+.hotel-stars {
   outline: #00ff00 2px solid;
 }
 
-.hotel-stars {
+.favorites {
+  outline: #00ff00 2px solid;
+}
+
+.favorites-counter {
+  outline: #00ff00 2px solid;
+}
+
+.search {
   outline: #00ff00 2px solid;
 }
