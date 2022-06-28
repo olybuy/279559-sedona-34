@@ -80,20 +80,23 @@
               <ul class="filter-form-list">
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="pool" checked>
-                    Бассейн
+                    <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Бассейн</span>
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="parking" checked>
-                    Паркинг
+                    <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Паркинг</span>
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="wi-fi">
-                    Wi-Fi
+                    <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Wi-Fi</span>
                   </label>
                 </li>
               </ul>
@@ -105,20 +108,24 @@
               <ul class="filter-form-list">
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="accommodation-type" value="hotel" checked>
-                    Гостиница
+                    <input class="control-input visually-hidden" type="radio" name="accommodation-type" value="hotel" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Гостиница</span>
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="accommodation-type" value="motel">
-                    Мотель
+                    <input class="control-input visually-hidden" type="radio" name="accommodation-type" value="motel">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Мотель</span>
+
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <label class="control">
-                    <input class="control-input" type="radio" name="accommodation-type" value="apartments">
-                    Апартаменты
+                    <input class="control-input visually-hidden" type="radio" name="accommodation-type" value="apartments">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Апартаменты</span>
                   </label>
                 </li>
               </ul>
@@ -128,16 +135,16 @@
                 Стоимость, ₽:
               </legend>
               <div class="price-controls">
-                <label class="control price-control">
+                <label class="price-control">
                   <span class="price-control-text">От</span>
                   <input class="range-input" type="number" name="min-price" placeholder="0">
                 </label>
-                <label class="control price-control">
+                <label class="price-control">
                   <span class="price-control-text">До</span>
                   <input class="range-input" type="number" name="max-price" placeholder="9000">
                 </label>
                 <div class="range-scale">
-                  <div class="range-bar" style="left: 10px; width: 236px;">
+                  <div class="range-bar" style="left: 10px; width: 216px;">
                     <button type="button" class="range-toggle toggle-min"></button>
                     <button type="button" class="range-toggle toggle-max"></button>
                   </div>

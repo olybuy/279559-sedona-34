@@ -209,7 +209,7 @@ button, input {
   content: "12";
   position: absolute;
   top: 15px;
-  right: 0;
+  right: -2px;
   display: block;
   width: 20px;
   height: 20px;
@@ -729,9 +729,73 @@ input[name="newsletter-email"] {
   width: 288px;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+}
+
+.infrastructure .control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.infrastructure .control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.infrastructure .control-input:focus + .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 3px solid #83B3D3;
+}
+
+.infrastructure .control:active .control-mark {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.infrastructure .control-input[type="checkbox"]:checked + .control-mark {
+  position: absolute;
+  background-image: url("../images/checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hotel-type .control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+}
+
+.hotel-type .control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+}
+
+.hotel-type .control-input:focus + .control-mark {
+  border: 3px solid #83B3D3;
+}
+
 .price-controls {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 144px);
   row-gap: 32px;
 }
 
@@ -805,10 +869,6 @@ input[name="newsletter-email"] {
   right: -10px;
 }
 
-.range-input::placeholder {
-  color: #fff;
-}
-
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
@@ -836,9 +896,42 @@ input[name="max-price"] {
   line-height: 21px;
   font-weight: 400;
   border: 2px solid #fff;
-  color: #fff;
   border-left: none;
   border-radius: 0 4px 4px 0;
+}
+
+.range-input::placeholder {
+  color: #fff;
+}
+
+.range-input[name="min-price"]:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.range-input[name="max-price"]:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-left: none;
+}
+
+.range-input[name="min-price"]:focus {
+  box-shadow: -1px 1px 0 2px #81B3D2,
+              1px -1px 0 2px #81B3D2,
+              inset 1px -1px 0 2px #81B3D2,
+              inset -1px 1px 0 2px #81B3D2;
+  outline: none;
+}
+
+.range-input[name="max-price"]:focus {
+  box-shadow: -1px 1px 0 2px #81B3D2,
+  1px -1px 0 2px #81B3D2,
+  inset 1px -1px 0 2px #81B3D2,
+  inset -1px 1px 0 2px #81B3D2;
+  outline: none;
+}
+
+.range-input[name="min-price"]:active,
+.range-input[name="max-price"]:active{
+  background-color: #756257;
 }
 
 .filter-buttons {
