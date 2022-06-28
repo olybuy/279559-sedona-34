@@ -71,6 +71,11 @@ button, input {
   cursor: pointer;
 }
 
+.button:disabled {
+  background-color: #E5E5E5;
+  cursor: inherit;
+}
+
 /* ЗАГОЛОВКИ */
 
 .title {
@@ -150,6 +155,19 @@ button, input {
   margin: auto;
 }
 
+.navigation-link:hover {
+  color: #756157;
+}
+
+.navigation-link:focus {
+  color: #756157;
+  outline: none;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .favorites {
   margin-right: 20px;
 }
@@ -179,15 +197,12 @@ button, input {
 
 .navigation-search-button:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .navigation-search-button:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
-}
-
-.navigation-search-button:disabled {
-  background-color: #E5E5E5;
 }
 
 .favorites-counter::after {
@@ -481,17 +496,13 @@ button, input {
 
 .search-form-button:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .search-form-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
 }
-
-.hotel-about-button:disabled {
-  background-color: #E5E5E5;
-}
-
 
 /* РАССЫЛКА */
 
@@ -502,7 +513,7 @@ button, input {
   text-align: center;
   background-image: url("../images/newsletter-background.jpg");
   background-color: #82B3D3;
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
@@ -542,7 +553,11 @@ input[name="newsletter-email"] {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 20px 22px;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21;
   border: 0;
   border-radius: 10px 0 0 10px;
 }
@@ -574,15 +589,12 @@ input[name="newsletter-email"] {
 
 .subscribe-button:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .subscribe-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
-}
-
-.subscribe-button:disabled {
-  background-color: #E5E5E5;
 }
 
 /* ХЛЕБНЫЕ КРОШКИ */
@@ -720,11 +732,11 @@ input[name="newsletter-email"] {
 .price-controls {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 20px;
+  row-gap: 32px;
 }
 
 .price-control input {
-  width: 142px;
+  width: 144px;
   height: 48px;
   padding: 0;
   margin: 0;
@@ -732,23 +744,101 @@ input[name="newsletter-email"] {
   background-color: transparent;
 }
 
-.range {
-  grid-column: 1 / -1;
+.price-control input:disabled {
+  opacity: 0.6;
 }
 
-.range .control-input {
-  width: 100%;
+.price-control {
+  position: relative;
+}
+
+.price-control-text {
+  position: absolute;
+  display: block;
+  right: 15px;
+  top: 14px;
+  font-size: 18px;
+  line-height: 21px;
+  opacity: 0.3;
+}
+
+.range-scale {
+  grid-column: 1 / -1;
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #fff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:focus {
+  border: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  border: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-input::placeholder {
+  color: #fff;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 input[name="min-price"] {
+  padding-left: 19px;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
   border: 2px solid #fff;
   border-radius: 4px 0 0 4px;
 }
 
 input[name="max-price"] {
+  padding-left: 17px;
+  padding-top: 14px;
+  padding-bottom: 13px;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
   border: 2px solid #fff;
+  color: #fff;
+  border-left: none;
   border-radius: 0 4px 4px 0;
-  border-left: none
 }
 
 .filter-buttons {
@@ -774,15 +864,12 @@ input[name="max-price"] {
 
 .filter-form-button:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .filter-form-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
-}
-
-.filter-form-button:disabled {
-  background-color: #E5E5E5;
 }
 
 .reset-link {
@@ -802,6 +889,7 @@ input[name="max-price"] {
 
 .reset-link:focus {
   color: rgba(255, 255, 255, 0.6);
+  outline: none;
 }
 
 /* SWITCHER */
@@ -831,10 +919,32 @@ input[name="max-price"] {
 
 .sorting {
   width: 290px;
-  height: 100%;
+  height: auto;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
   color: #333333;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.sorting:hover,
+.sorting:focus {
+  border: 2px solid #68A2CA;
+}
+
+.sorting:active {
+  border: 2px solid #3F5E72;
+}
+
+.sorting:disabled,
+.sorting:disabled:hover {
+  opacity: 0.3;
+  border: 2px solid #E5E5E5;
+  cursor: inherit;
 }
 
 .view-switcher-list {
@@ -868,7 +978,7 @@ input[name="max-price"] {
   border: 2px solid #000;
 }
 
-.view-button-active {
+.view-button-current {
   border-color: #000;
 }
 
@@ -945,15 +1055,12 @@ input[name="max-price"] {
 
 .hotel-about-button:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .hotel-about-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
-}
-
-.hotel-about-button:disabled {
-  background-color: #E5E5E5;
 }
 
 .hotel-favorites-button {
@@ -969,15 +1076,12 @@ input[name="max-price"] {
 
 .hotel-favorites-button:focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .hotel-favorites-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82B3D3;
-}
-
-.hotel-favorites-button:disabled {
-  background-color: #E5E5E5;
 }
 
 .added-favorites-button {
@@ -991,15 +1095,12 @@ input[name="max-price"] {
 
 .added-favorites-button:focus {
   background-color: #6C9E42;
+  outline: none;
 }
 
 .added-favorites-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #7DB54F;
-}
-
-.added-favorites-button:disabled {
-  background-color: #E5E5E5;
 }
 
 .hotel-price-list {
@@ -1062,6 +1163,7 @@ input[name="max-price"] {
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 25px;
+  border-top: 1px solid #E6E6E6;
 }
 
 .pagination-list {
@@ -1097,6 +1199,7 @@ input[name="max-price"] {
 
 .pagination-link:not(.pagination-current):focus {
   background-color: #68A2CA;
+  outline: none;
 }
 
 .pagination-link:not(.pagination-current):active {
@@ -1118,9 +1221,32 @@ input[name="max-price"] {
 
 .hotel-counter-select {
   width: 160px;
-  height: 100%;
+  height: auto;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.hotel-counter-select:hover,
+.hotel-counter-select:focus {
+  border: 2px solid #68A2CA;
+}
+
+.hotel-counter-select:active {
+  border: 2px solid #3F5E72;
+}
+
+.hotel-counter-select:disabled,
+.hotel-counter-select:disabled:hover {
+  opacity: 0.3;
+  border: 2px solid #E5E5E5;
+  cursor: inherit;
 }
 
 /* ПОДВАЛ */
@@ -1159,18 +1285,16 @@ input[name="max-price"] {
   left: 0;
   right: 0;
   margin: auto;
+  color: #83B3D3;
 }
 
-.social-link-icon:hover path {
-  fill: #68A2CA;
+.social-link:hover .social-link-icon,
+.social-link:focus .social-link-icon {
+  color: #68A2CA;
 }
 
-.social-link-icon:focus path {
-  fill: #68A2CA;
-}
-
-.social-link-icon:active path {
-  fill: rgba(104, 162, 202, 0.3);
+.social-link:active .social-link-icon {
+  color: rgba(104, 162, 202, 0.3);
 }
 
 .footer-tel {
@@ -1181,12 +1305,10 @@ input[name="max-price"] {
   text-decoration: none;
 }
 
-.footer-tel:hover {
-  color: #756157;
-}
-
+.footer-tel:hover,
 .footer-tel:focus {
   color: #756157;
+  outline: none;
 }
 
 .footer-tel:active {
@@ -1197,19 +1319,17 @@ input[name="max-price"] {
   width: 300px;
 }
 
-.copyright-logo svg {
+.copyright-logo-icon {
   display: block;
   margin-left: auto;
+  color: #000;
 }
 
-.copyright-logo svg:hover {
-  fill: #756157;
+.copyright-logo:hover .copyright-logo-icon,
+.copyright-logo:focus .copyright-logo-icon {
+  color: #756157;
 }
 
-.copyright-logo svg:focus {
-  fill: #756157;
-}
-
-.copyright-logo svg:active {
-  fill: rgba(117, 97, 87, 0.3);
+.copyright-logo:active .copyright-logo-icon {
+  color: rgba(117, 97, 87, 0.3);
 }
