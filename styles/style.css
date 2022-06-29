@@ -1577,30 +1577,33 @@ input[name="max-price"] {
   background-position: center;
 }
 
-.minus {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 18px;
-  right: 19px;
-  margin: auto;
-  text-align: center;
-  cursor: pointer;
-  opacity: 0.3;
-  outline: 1px solid crimson;
-}
-
-
 .plus {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 18px;
-  right: 95px;
-  opacity: 0.3;
+  width: 15px;
+  height: 2px;
+  padding: 15px 19px;
+  top: 8px;
+  right: 0px;
+  background-image: url("../images/plus-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
   cursor: pointer;
-  text-align: center;
-  outline: 1px solid crimson;
+  opacity: 0.3;
 }
 
+.minus {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  padding: 15px 19px;
+  top: 8px;
+  right: 90px;
+  background-image: url("../images/minus-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+}
 
