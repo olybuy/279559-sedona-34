@@ -43,7 +43,9 @@
             <a href="" class="navigation-link favorites">
                 <span class="visually-hidden">Гостиниц в избранном:</span>
                 <svg class="navigation-link-icon" fill="currentColor" width="18" height="17" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M9.58 17c-.3 0-.6-.1-.8-.4-5.42-6.1-6.72-7.5-7.03-7.9A5.4 5.4 0 0 1 6.16 0c1.31 0 2.51.5 3.52 1.3a5.47 5.47 0 0 1 9.03 4.1c0 1.3-.5 2.5-1.31 3.4l-7.02 7.9c-.2.2-.4.3-.8.3ZM3.56 7.5c.3.4 3.51 4 6.12 6.9l6.21-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.71 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.71-1.3c-1.8 0-3.31 1.5-3.31 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/></svg>
-                <span class="favorites-counter"></span>
+                <span class="favorites-counter">
+                  <span class="favorites-number">12</span>
+                </span>
             </a>
           </li>
           <li class="navigation-item">
@@ -202,6 +204,45 @@
         </a>
       </section>
     </footer>
+
+    <div class="modal-container" style="display:none;">
+      <div class="modal modal-search">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="title modal-search-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group arrival-date">
+              <label class="modal-search-label" for="arrival-date">Дата Заезда: </label>
+              <input class="modal-search-field" type="date" id="arrival-date" name="search-arrival-date" placeholder="27 апреля 2020">
+            </p>
+            <p class="field-group depart-date">
+              <label class="modal-search-label" for="depart-date">Дата Выезда:</label>
+              <input class="modal-search-field" type="date" id="depart-date" name="search-depart-date" placeholder="27 апреля 2020">
+            </p>
+            <div class="modal-search-wrapper">
+              <p class="field-group adult-number">
+                <label class="modal-search-label" for="adult-number">Взрослые:</label>
+                <input class="modal-search-field" type="number" id="adult-number" name="search-adult-number" placeholder="2">
+                <button type="button" class="modal-counter-button plus">
+                  <svg width="14" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" fill="#000"/></svg>
+                </button>
+                <button type="button" class="modal-counter-button minus">
+                  <svg width="15" height="2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M.11 0v2h14V0h-14Z" fill="#000"/></svg>
+                </button>
+              </p>
+              <p class="field-group kids-number">
+                <label class="modal-search-label" for="kids-number">Дети:</label>
+                <input class="modal-search-field" type="number" id="kids-number" name="search-kids-number" placeholder="1">
+              </p>
+            </div>
+            <button class="button modal-search-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </div>
   </body>
 </html>
