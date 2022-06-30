@@ -205,7 +205,7 @@
       </section>
     </footer>
 
-    <div class="modal-container" style="display: none">
+    <div class="modal-container">
       <div class="modal modal-search">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
@@ -213,34 +213,43 @@
         <section class="modal-content">
           <h2 class="title modal-search-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group arrival-date">
+            <p class="field-group date arrival-date">
               <label class="modal-search-label" for="arrival-date">Дата Заезда: </label>
-              <input class="modal-search-field" type="date" id="arrival-date" name="search-arrival-date" placeholder="27 апреля 2020">
+              <input class="modal-search-field" type="text" id="arrival-date" name="search-arrival-date" placeholder="Укажите дату">
             </p>
-            <p class="field-group depart-date">
+            <p class="field-group date depart-date">
               <label class="modal-search-label" for="depart-date">Дата Выезда:</label>
-              <input class="modal-search-field" type="date" id="depart-date" name="search-depart-date" placeholder="27 апреля 2020">
+              <input class="modal-search-field" type="text" id="depart-date" name="search-depart-date" placeholder="Укажите дату">
             </p>
-            <div class="modal-search-wrapper">
-              <p class="field-group adult-number">
-                <label class="modal-search-label" for="adult-number">Взрослые:</label>
+            <p class="field-group number-of-guests adult-number">
+              <label class="modal-search-label" for="adult-number">Взрослые:</label>
+              <span class="modal-wrapper">
                 <input class="modal-search-field" type="number" id="adult-number" name="search-adult-number" placeholder="2">
-                <button type="button" class="modal-counter-button plus"></button>
                 <button type="button" class="modal-counter-button minus"></button>
-              </p>
-              <p class="field-group kids-number">
+                <button type="button" class="modal-counter-button plus"></button>
+              </span>
+            </p>
+            <p class="field-group number-of-guests kids-number">
+              <span class="modal-search-label form-label-icon">
                 <label class="modal-search-label" for="kids-number">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                    <svg class="tooltip-icon" width="3" height="12" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.11 0h2v2h-2V0Zm2 12h-2V3h2v9Z"/></svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+              <span class="modal-wrapper">
                 <input class="modal-search-field" type="number" id="kids-number" name="search-kids-number" placeholder="1">
-                <button type="button" class="modal-counter-button plus"></button>
                 <button type="button" class="modal-counter-button minus"></button>
-              </p>
-            </div>
+                <button type="button" class="modal-counter-button plus"></button>
+              </span>
+            </p>
             <button class="button modal-search-button" type="submit">Найти</button>
           </form>
         </section>
       </div>
     </div>
-
   </div>
   </body>
 </html>
