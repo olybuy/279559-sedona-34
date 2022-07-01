@@ -90,6 +90,7 @@ button, input {
 
 .page-header {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -108,9 +109,9 @@ button, input {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
-  height: 65px;
 }
 
 .navigation-list {
@@ -236,7 +237,7 @@ button, input {
   color: #000;
   background-image: url("../images/index-background.jpg");
   background-size: cover; /* или background-size: 100% auto; ?? */
-  background-color: #fff;
+  background-color: #3F5E72;
   background-repeat: no-repeat;
 }
 
@@ -412,7 +413,7 @@ button, input {
 
 
 .true-town {
-  width: 1200px;
+  width: 100%;
   padding: 0;
 }
 
@@ -432,7 +433,6 @@ button, input {
 }
 
 .true-town-image {
-  display: block;
   max-width: 100%;
   height: 100%;
   object-fit: cover;
@@ -440,7 +440,7 @@ button, input {
 
 .devil-bridge {
   display: flex;
-  width: 1200px;
+  width: 100%;
   padding: 0;
 }
 
@@ -553,7 +553,7 @@ button, input {
 .newsletter-form {
   display: flex;
   justify-content: space-between;
-  width: 800px;
+  max-width: 800px;
   height: 60px;
   margin: 0 auto;
 }
@@ -576,7 +576,7 @@ input[name="newsletter-email"] {
 }
 
 .newsletter-label-inner input {
-  color: #fff;
+  color: #333333;
   background-color: #F2F2F2;
 }
 
@@ -691,9 +691,8 @@ input[name="newsletter-email"] {
 }
 
 .filter-form {
-  display: grid;
-  grid-template-columns: 210px 310px 350px 160px;
-  column-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
   padding-bottom: 70px;
 }
 
@@ -728,15 +727,15 @@ input[name="newsletter-email"] {
 }
 
 .infrastructure {
-  width: auto;
+  width: 210px;
 }
 
 .hotel-type {
-  width: auto;
+  width: 310px;
 }
 
 .price-choice {
-  width: 288px;
+  width: 350px;
 }
 
 .control {
@@ -889,6 +888,10 @@ input[name="newsletter-email"] {
   margin: 0;
 }
 
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 input[name="min-price"] {
   padding-left: 19px;
   padding-top: 14px;
@@ -1018,10 +1021,10 @@ input[name="max-price"] {
 
 .view-switcher-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 56px;
-  height: 48px;
 }
 
 .select-control {
@@ -1117,7 +1120,7 @@ input[name="max-price"] {
 
 .hotel-list {
   display: grid;
-  grid-template-columns: repeat(3, 340px);
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   column-gap: 18px;
   margin: 0;
   margin-bottom: 66px;
@@ -1395,13 +1398,11 @@ input[name="max-price"] {
 .page-footer {
   display: flex;
   justify-content: space-between;
-  width: 1060px;
-  margin: 0 auto;
-  margin-bottom: 35px;
+  margin: 0 70px 35px 70px;
 }
 
 .footer-social {
-  width: 300px;
+  width: 180px;
 }
 
 .footer-social-list {
@@ -1457,7 +1458,7 @@ input[name="max-price"] {
 }
 
 .footer-copyright {
-  width: 300px;
+  width: 180px;
 }
 
 .copyright-logo-icon {
