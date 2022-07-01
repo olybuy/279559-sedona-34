@@ -743,6 +743,7 @@ input[name="newsletter-email"] {
   position: relative;
   display: block;
   padding-left: 39px;
+  cursor: pointer;
 }
 
 .infrastructure .control-mark {
@@ -1516,16 +1517,26 @@ input[name="max-price"] {
   width: 53px;
   height: 53px;
   background-color: #F2F2F2;
-  background-image: url("../images/cross-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
   border-radius: 50%;
   cursor: pointer;
 }
 
+.close-button-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 15px;
+  height: 14px;
+}
+
 .modal-close-button:hover {
   background-color: #E6E6E6;
+}
+
+.modal-close-button:hover .close-button-icon {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-close-button:focus {
@@ -1552,6 +1563,7 @@ input[name="max-price"] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 56px;
+  row-gap: 40px;
 }
 
 .date {
@@ -1567,7 +1579,6 @@ input[name="max-price"] {
   display: flex;
   align-items: center;
   margin: 0;
-  margin-bottom: 40px;
 }
 
 .modal-search-field {
@@ -1690,6 +1701,9 @@ input[name="max-price"] {
 
 .modal-counter-button:hover {
   opacity: 1;
+}
+
+.modal-counter-button:hover + .modal-search-field {
   background-color: #E6E6E6;
 }
 
@@ -1757,6 +1771,12 @@ input[name="max-price"] {
 
 .tooltip-icon {
   color: #fff;
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -1767,5 +1787,35 @@ input[name="max-price"] {
 .form-label-icon {
   position: relative;
   padding-right: 25px;
+  box-sizing: border-box;
 }
 
+.error-text {
+  position: absolute;
+  top: 120%;
+  left: 155px;
+  display: block;
+  color: #ff0000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.error {
+  display: none;
+}
+
+.attention-text {
+  position: absolute;
+  top: 120%;
+  left: 155px;
+  display: block;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.attention {
+  display: none;
+}
