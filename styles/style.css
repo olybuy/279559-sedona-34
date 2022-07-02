@@ -396,8 +396,7 @@ button, input {
   display: block;
   width: 75px;
   height: 72px;
-  margin: auto;
-  margin-bottom: 30px;
+  margin: -1px auto 30px auto;
   background-image: url('../images/icon-house.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -409,7 +408,7 @@ button, input {
   width: 74px;
   height: 70px;
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   background-image: url('../images/icon-food.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -420,8 +419,7 @@ button, input {
   display: block;
   width: 64px;
   height: 76px;
-  margin: auto;
-  margin-bottom: 30px;
+  margin: -3px auto 28px auto;
   background-image: url('../images/icon-suvenirs.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -857,7 +855,7 @@ input[name="newsletter-email"]::placeholder {
   position: absolute;
   display: block;
   right: 15px;
-  top: 14px;
+  top: 12px;
   font-size: 18px;
   line-height: 21px;
   opacity: 0.3;
@@ -1543,6 +1541,7 @@ input[name="max-price"] {
 
 .modal-search-title {
   margin-bottom: 63px;
+  margin-left: -2px;
 }
 
 .modal-close-button {
@@ -1696,6 +1695,7 @@ input[name="max-price"] {
   background-image: url("../images/calendar-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.3;
 }
 
 .modal-wrapper {
@@ -1706,13 +1706,12 @@ input[name="max-price"] {
 
 .plus {
   position: absolute;
-  width: 15px;
   height: 100%;
-  padding: 15px 19px;
+  padding: 15px 19px 15px 14px;
   right: 0;
   background-image: url("../images/plus-icon.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -1721,13 +1720,12 @@ input[name="max-price"] {
 
 .minus {
   position: absolute;
-  width: 14px;
   height: 100%;
-  padding: 15px 19px;
+  padding: 15px 15px 15px 19px;
   left: 0;
   background-image: url("../images/minus-icon.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-color: transparent;
   border: none;
   opacity: 0.3;
