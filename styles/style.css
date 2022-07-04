@@ -61,14 +61,10 @@ body {
 
 /* КНОПКИ */
 
-button,
-input {
-  font-family: "PT Sans", sans-serif;
-}
-
 .button {
   display: inline-block;
   margin: 0;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -581,6 +577,7 @@ input[name="newsletter-email"] {
   box-sizing: border-box;
   border: 0;
   border-radius: 10px 0 0 10px;
+  font-family: "PT Sans", sans-serif;
 }
 
 input[name="newsletter-email"]::placeholder {
@@ -780,7 +777,7 @@ input[name="newsletter-email"]::placeholder {
   border-radius: 4px;
 }
 
-.infrastructure .control:hover .control-mark {
+.infrastructure-control:hover .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -789,7 +786,7 @@ input[name="newsletter-email"]::placeholder {
   border: 3px solid #83B3D3;
 }
 
-.infrastructure .control:active .control-mark {
+.infrastructure-control:active .control-mark {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
