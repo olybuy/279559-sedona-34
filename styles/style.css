@@ -181,11 +181,14 @@ button, input {
 
 .navigation-active-link::after {
   content: "";
+  position: absolute;
+  left: 17px;
+  right: 17px;
+  bottom: -1px;
+  z-index: 2;
   display: block;
   height: 2px;
   background-color: #756257;
-  margin-top: 17px;
-  margin-bottom: -19px;
 }
 
 .navigation-search-button {
@@ -212,8 +215,7 @@ button, input {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.favorites-counter::after {
-  content: "";
+.favorites-counter {
   position: absolute;
   top: 2px;
   right: -2px;
@@ -225,14 +227,12 @@ button, input {
 }
 
 .favorites-number {
-  position: absolute;
-  top: -1px;
-  left: 29px;
   display: block;
+  margin-top: 2.5px;
   font-size: 10px;
+  line-height: 13px;
   letter-spacing: -0.1em;
   color: #fff;
-  z-index: 2;
 }
 
 /* ГЛАВНАЯ СТРАНИЦА */
@@ -379,6 +379,7 @@ button, input {
 
 .advantages-more-wrapper {
   padding: 0;
+  width: 100%;
 }
 
 .advantages-more-list li:nth-child(odd) {
@@ -884,6 +885,10 @@ input[name="newsletter-email"]::placeholder {
   cursor: pointer;
 }
 
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
 .range-toggle:focus {
   border: 3px solid #83B3D3;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -946,11 +951,12 @@ input[name="max-price"] {
 
 .range-input[name="min-price"]:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .range-input[name="max-price"]:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
-  border-left: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .range-input[name="min-price"]:focus {
@@ -1021,12 +1027,14 @@ input[name="max-price"] {
 }
 
 .reset-link:active {
-  border: 3px solid #83B3D3;
+  opacity: 0.3;
+  outline: none;
+  border: none;
 }
 
 .reset-link:focus {
-  color: rgba(255, 255, 255, 0.6);
-  outline: none;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
 }
 
 /* SWITCHER */
@@ -1583,6 +1591,7 @@ input[name="max-price"] {
 }
 
 .modal-search-label {
+  align-self: center;
   width: 155px;
   font-size: 20px;
   font-weight: 700;
@@ -1611,7 +1620,7 @@ input[name="max-price"] {
 .field-group {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin: 0;
 }
 
@@ -1825,10 +1834,10 @@ input[name="max-price"] {
 
 .error-text {
   position: absolute;
-  top: 120%;
+  top: 58px;
   left: 155px;
   display: block;
-  color: #ff0000;
+  color: #FF5757;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
@@ -1840,7 +1849,7 @@ input[name="max-price"] {
 
 .attention-text {
   position: absolute;
-  top: 120%;
+  top: 58px;
   left: 155px;
   display: block;
   color: #333333;
