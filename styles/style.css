@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,23 +10,26 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 html {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
+  min-width: 1280px;
   height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
   color: #000;
-  background-color: #E5E5E5;
+  background-color: #fff;
 }
 
 .container {
@@ -36,6 +39,7 @@ body {
   width: 1200px;
   min-height: 100%;
   background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -63,6 +67,7 @@ button, input {
 
 .button {
   display: inline-block;
+  margin: 0;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -89,16 +94,16 @@ button, input {
 /* НАВИГАЦИЯ */
 
 .page-header {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
 }
 
 .logo {
+  position: absolute;
   z-index: 2;
   width: 139px;
-  margin-left: 70px;
-  margin-right: 30px;
-  margin-bottom: -5px;
+  left: 70px;
 }
 
 .logo img {
@@ -112,6 +117,8 @@ button, input {
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
+  margin-right: 70px;
+  margin-left: 239px;
 }
 
 .navigation-list {
@@ -125,8 +132,8 @@ button, input {
 }
 
 .navigation-user {
-  width: 264px;
-  margin-right: 70px;
+  justify-content: flex-end;
+  width: 320px;
 }
 
 .navigation-item {
@@ -137,9 +144,8 @@ button, input {
   position: relative;
   display: block;
   min-width: 42px;
-  height: 65px;
   box-sizing: border-box;
-  padding: 20px 17px;
+  padding: 20px 17px 19px 17px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -175,11 +181,14 @@ button, input {
 
 .navigation-active-link::after {
   content: "";
+  position: absolute;
+  left: 17px;
+  right: 17px;
+  bottom: -1px;
+  z-index: 2;
   display: block;
-  height: 0;
-  border-bottom: 2px solid #756257;
-  margin-top: 17px;
-  margin-bottom: -17px;
+  height: 2px;
+  background-color: #756257;
 }
 
 .navigation-search-button {
@@ -206,10 +215,9 @@ button, input {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.favorites-counter::after {
-  content: "";
+.favorites-counter {
   position: absolute;
-  top: 15px;
+  top: 2px;
   right: -2px;
   display: block;
   width: 20px;
@@ -219,20 +227,22 @@ button, input {
 }
 
 .favorites-number {
-  position: absolute;
-  top: 13px;
-  left: 29px;
   display: block;
+  margin-top: 2.5px;
   font-size: 10px;
+  line-height: 13px;
+  letter-spacing: -0.1em;
   color: #fff;
-  z-index: 2;
 }
 
 /* ГЛАВНАЯ СТРАНИЦА */
 
 .main-header {
+  position: relative;
   padding-top: 51px;
   margin-bottom: 63px;
+  box-sizing: border-box;
+  height: 485px;
   text-align: center;
   color: #000;
   background-image: url("../images/index-background.jpg");
@@ -243,7 +253,10 @@ button, input {
 
 .main-header::after {
   content: "";
+  position: absolute;
+  bottom: 0;
   display: block;
+  width: 100%;
   height: 57px;
   background-image: url("../images/divider.svg");
   background-repeat: no-repeat;
@@ -257,17 +270,15 @@ button, input {
 .promo-wrapper {
   margin: 0 auto;
   margin-bottom: 90px;
-  width: 654px;
+  width: 660px;
   text-align: center;
 }
 
 .promo-main-title {
-  width: 620px;
   margin-bottom: 31px;
 }
 
 .promo-main-desc {
-  width: 654px;
   margin: 0;
   color: #333333;
 }
@@ -293,11 +304,11 @@ button, input {
 }
 
 .advantages-list li:nth-child(2n+3) {
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-list li:nth-child(2n+4) {
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-item {
@@ -308,6 +319,7 @@ button, input {
 
 .advantages-item-wrapper {
   width: 230px;
+  padding: 20px;
 }
 
 .advantages-list > .advantages-item:not(.devil-bridge) {
@@ -315,6 +327,10 @@ button, input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.advantages-list .advantages-item.true-town {
+  align-items: flex-start;
 }
 
 .advantages-more-list > .advantages-item {
@@ -363,6 +379,7 @@ button, input {
 
 .advantages-more-wrapper {
   padding: 0;
+  width: 100%;
 }
 
 .advantages-more-list li:nth-child(odd) {
@@ -380,8 +397,7 @@ button, input {
   display: block;
   width: 75px;
   height: 72px;
-  margin: auto;
-  margin-bottom: 30px;
+  margin: -1px auto 30px auto;
   background-image: url('../images/icon-house.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -393,7 +409,7 @@ button, input {
   width: 74px;
   height: 70px;
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   background-image: url('../images/icon-food.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -404,8 +420,7 @@ button, input {
   display: block;
   width: 64px;
   height: 76px;
-  margin: auto;
-  margin-bottom: 30px;
+  margin: -3px auto 28px auto;
   background-image: url('../images/icon-suvenirs.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -554,7 +569,6 @@ button, input {
   display: flex;
   justify-content: space-between;
   max-width: 800px;
-  height: 60px;
   margin: 0 auto;
 }
 
@@ -562,13 +576,18 @@ input[name="newsletter-email"] {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 20px 22px;
+  padding: 20px 22px 19px 22px;
   box-sizing: border-box;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21;
   border: 0;
   border-radius: 10px 0 0 10px;
+}
+
+input[name="newsletter-email"]::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 0;
+  margin: 0;
 }
 
 .newsletter-label {
@@ -582,7 +601,6 @@ input[name="newsletter-email"] {
 
 .subscribe-button {
   width: 200px;
-  height: 100%;
   padding: 12px 15px;
   font-size: 20px;
   line-height: 36px;
@@ -612,8 +630,7 @@ input[name="newsletter-email"] {
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  margin-bottom: 40px;
+  margin: 0 0 40px 2px;
   padding: 0;
   list-style-type: none;
 }
@@ -621,7 +638,6 @@ input[name="newsletter-email"] {
 .breadcrumbs-item {
   display: flex;
   align-items: center;
-  height: 21px;
   font-size: 16px;
   line-height: 21px;
   color: #fff;
@@ -652,7 +668,7 @@ input[name="newsletter-email"] {
 .breadcrumbs-item:not(:last-child)::after {
   content: "";
   display: block;
-  width: 6px;
+  width: 5px;
   height: 8px;
   margin-left: 10px;
   margin-right: 10px;
@@ -693,10 +709,12 @@ input[name="newsletter-email"] {
 .filter-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 70px;
 }
 
 .filter-form-title {
+  padding: 0;
   margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
@@ -727,7 +745,7 @@ input[name="newsletter-email"] {
 }
 
 .infrastructure {
-  width: 210px;
+  width: 211px;
 }
 
 .hotel-type {
@@ -738,10 +756,15 @@ input[name="newsletter-email"] {
   width: 350px;
 }
 
+.price-choice .filter-form-title {
+  margin-bottom: 34px;
+}
+
 .control {
   position: relative;
   display: block;
   padding-left: 39px;
+  margin-left: 1px;
   cursor: pointer;
 }
 
@@ -809,7 +832,7 @@ input[name="newsletter-email"] {
 .price-controls {
   display: grid;
   grid-template-columns: repeat(2, 144px);
-  row-gap: 32px;
+  row-gap: 28px;
 }
 
 .price-control input {
@@ -833,7 +856,7 @@ input[name="newsletter-email"] {
   position: absolute;
   display: block;
   right: 15px;
-  top: 14px;
+  top: 12px;
   font-size: 18px;
   line-height: 21px;
   opacity: 0.3;
@@ -860,6 +883,10 @@ input[name="newsletter-email"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:focus {
@@ -893,7 +920,7 @@ input[type='number'] {
 }
 
 input[name="min-price"] {
-  padding-left: 19px;
+  padding-left: 17px;
   padding-top: 14px;
   padding-bottom: 13px;
   box-sizing: border-box;
@@ -901,6 +928,7 @@ input[name="min-price"] {
   line-height: 21px;
   font-weight: 400;
   border: 2px solid #fff;
+  border-right: 1px solid #fff;
   border-radius: 4px 0 0 4px;
 }
 
@@ -913,7 +941,7 @@ input[name="max-price"] {
   line-height: 21px;
   font-weight: 400;
   border: 2px solid #fff;
-  border-left: none;
+  border-left: 1px solid #fff;
   border-radius: 0 4px 4px 0;
 }
 
@@ -923,11 +951,12 @@ input[name="max-price"] {
 
 .range-input[name="min-price"]:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .range-input[name="max-price"]:hover {
   border: 2px solid rgba(255, 255, 255, 0.6);
-  border-left: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .range-input[name="min-price"]:focus {
@@ -953,7 +982,8 @@ input[name="max-price"] {
 
 .filter-buttons {
   width: 160px;
-  padding-top: 56px;
+  /*padding-top: 60px;*/
+  align-self: flex-end;
   text-align: center;
 }
 
@@ -961,6 +991,7 @@ input[name="max-price"] {
   display: block;
   width: 130px;
   padding: 14px 15px;
+  margin: 0;
   margin-bottom: 20px;
   box-sizing: content-box;
   color: #fff;
@@ -983,6 +1014,8 @@ input[name="max-price"] {
 }
 
 .reset-link {
+  display: block;
+  margin: 0;
   color: #fff;
   font-size: 16px;
   line-height: 20px;
@@ -994,19 +1027,21 @@ input[name="max-price"] {
 }
 
 .reset-link:active {
-  border: 3px solid #83B3D3;
+  opacity: 0.3;
+  outline: none;
+  border: none;
 }
 
 .reset-link:focus {
-  color: rgba(255, 255, 255, 0.6);
-  outline: none;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
 }
 
 /* SWITCHER */
 
 .catalog-search-results {
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: 73px;
+  margin-right: 71px;
   margin-bottom: 94px;
 }
 
@@ -1025,20 +1060,26 @@ input[name="max-price"] {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 56px;
+  margin-left: -1px;
+}
+
+.view-switcher-wrapper .title {
+  margin-right: 191px;
 }
 
 .select-control {
   appearance: none;
   background-image: url("../images/list-arrow-dropdown.svg");
   background-repeat: no-repeat;
-  background-position: right 16px center;
+  background-position: right 19px center;
 }
 
 .sorting {
   width: 290px;
-  height: auto;
-  padding: 14px 20px;
+  padding: 12px 18px;
   box-sizing: border-box;
+  margin-right: 78px;
+  font-family: 'PT Sans', sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -1065,8 +1106,11 @@ input[name="max-price"] {
 }
 
 .view-switcher-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 48px);
+  column-gap: 8px;
+  row-gap: 8px;
+  align-self: self-start;
   width: 160px;
   margin: 0;
   padding: 0;
@@ -1106,14 +1150,6 @@ input[name="max-price"] {
   right: 0;
   left: 0;
   margin: auto;
-}
-
-.view-item {
-  margin-right: 8px;
-}
-
-.view-item:nth-child(3n) {
-  margin-right: 0;
 }
 
 /* КАРТОЧКА ОТЕЛЯ */
@@ -1236,11 +1272,13 @@ input[name="max-price"] {
 }
 
 .hotel-rating {
+  display: block;
   padding: 9px 22px 8px 23px;
   font-size: 16px;
-  line-height: 20px;
   text-align: center;
+  line-height: 20px;
   color: #333333;
+  text-transform: uppercase;
   background-color: #F2F2F2;
   border-radius: 4px;
 }
@@ -1323,9 +1361,9 @@ input[name="max-price"] {
 
 .pagination-link {
   display: block;
-  width: 60px;
-  height: 60px;
-  padding: 12px;
+  min-width: 60px;
+  min-height: 60px;
+  padding: 11px;
   box-sizing: border-box;
   font-size: 20px;
   line-height: 36px;
@@ -1366,7 +1404,7 @@ input[name="max-price"] {
 .hotel-counter-select {
   width: 160px;
   height: auto;
-  padding: 14px 20px;
+  padding: 12px 18px;
   box-sizing: border-box;
   font-size: 18px;
   font-weight: 400;
@@ -1398,11 +1436,12 @@ input[name="max-price"] {
 .page-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 70px 35px 70px;
 }
 
 .footer-social {
-  width: 180px;
+  width: 208px;
 }
 
 .footer-social-list {
@@ -1410,13 +1449,14 @@ input[name="max-price"] {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  height: 40px;
   list-style-type: none;
 }
 
 .social-link {
   position: relative;
   display: block;
-  min-width: 48px;
+  min-width: 47px;
   min-height: 40px;
 }
 
@@ -1509,6 +1549,7 @@ input[name="max-price"] {
 
 .modal-search-title {
   margin-bottom: 63px;
+  margin-left: -2px;
 }
 
 .modal-close-button {
@@ -1550,6 +1591,7 @@ input[name="max-price"] {
 }
 
 .modal-search-label {
+  align-self: center;
   width: 155px;
   font-size: 20px;
   font-weight: 700;
@@ -1578,7 +1620,7 @@ input[name="max-price"] {
 .field-group {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin: 0;
 }
 
@@ -1662,6 +1704,7 @@ input[name="max-price"] {
   background-image: url("../images/calendar-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.3;
 }
 
 .modal-wrapper {
@@ -1672,13 +1715,12 @@ input[name="max-price"] {
 
 .plus {
   position: absolute;
-  width: 15px;
   height: 100%;
-  padding: 15px 19px;
+  padding: 15px 19px 15px 14px;
   right: 0;
   background-image: url("../images/plus-icon.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -1687,13 +1729,12 @@ input[name="max-price"] {
 
 .minus {
   position: absolute;
-  width: 14px;
   height: 100%;
-  padding: 15px 19px;
+  padding: 15px 15px 15px 19px;
   left: 0;
   background-image: url("../images/minus-icon.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-color: transparent;
   border: none;
   opacity: 0.3;
@@ -1793,10 +1834,10 @@ input[name="max-price"] {
 
 .error-text {
   position: absolute;
-  top: 120%;
+  top: 58px;
   left: 155px;
   display: block;
-  color: #ff0000;
+  color: #FF5757;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
@@ -1808,7 +1849,7 @@ input[name="max-price"] {
 
 .attention-text {
   position: absolute;
-  top: 120%;
+  top: 58px;
   left: 155px;
   display: block;
   color: #333333;
