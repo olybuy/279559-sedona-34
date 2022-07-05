@@ -160,9 +160,9 @@
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="newsletter-label">
             <span class="visually-hidden">Введите ваш e-mail:</span>
-            <input name="newsletter-email" type="email" placeholder="Ваш e-mail">
+            <input name="newsletter-email" type="email" placeholder="Ваш e-mail" required>
           </label>
-          <button class="button subscribe-button" type="button">Подписаться</button>
+          <button class="button subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
@@ -182,7 +182,7 @@
           <li>
             <a class="social-link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
-              <svg class="social-link-icon" fill="currentColor" width="18" height="17" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M16.79.6.84 6.75c-1.09.43-1.08 1.04-.2 1.31l4.1 1.28 9.47-5.98c.44-.27.85-.12.52.18l-7.68 6.92-.28 4.22c.41 0 .6-.19.83-.41l1.99-1.93 4.13 3.05c.77.42 1.31.2 1.5-.7l2.72-12.8C18.22.77 17.5.27 16.79.59Z"/><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+              <svg class="social-link-icon" fill="currentColor" width="18" height="17" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M16.79.6.84 6.75c-1.09.43-1.08 1.04-.2 1.31l4.1 1.28 9.47-5.98c.44-.27.85-.12.52.18l-7.68 6.92-.28 4.22c.41 0 .6-.19.83-.41l1.99-1.93 4.13 3.05c.77.42 1.31.2 1.5-.7l2.72-12.8C18.22.77 17.5.27 16.79.59Z"/><defs><clipPath id="b"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
             </a>
           </li>
           <li>
@@ -217,19 +217,19 @@
           <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group date arrival-date">
               <label class="modal-search-label" for="arrival-date">Дата Заезда:</label>
-              <input class="modal-search-field" type="text" id="arrival-date" name="search-arrival-date" placeholder="27 апреля 2020">
+              <input class="modal-search-field" type="text" id="arrival-date" name="search-arrival-date" placeholder="27 апреля 2020" required>
               <span class="error-text">Мы не можем отправить вас в прошлое.</span>
             </p>
             <p class="field-group date depart-date">
               <label class="modal-search-label" for="depart-date">Дата Выезда:</label>
-              <input class="modal-search-field" type="text" id="depart-date" name="search-depart-date" placeholder="1 сентября 2021">
+              <input class="modal-search-field" type="text" id="depart-date" name="search-depart-date" placeholder="1 сентября 2021" required>
               <span class="attention-text">На эти даты есть свободные номера. Пока есть.</span>
             </p>
             <p class="field-group number-of-guests adult-number">
               <label class="modal-search-label" for="adult-number">Взрослые:</label>
               <span class="modal-wrapper">
                 <button class="modal-counter-button minus" type="button"></button>
-                <input class="modal-search-field" type="number" id="adult-number" name="search-adult-number" placeholder="2">
+                <input class="modal-search-field" type="number" id="adult-number" name="search-adult-number" placeholder="2" required>
                 <button class="modal-counter-button plus" type="button"></button>
               </span>
             </p>
@@ -245,7 +245,7 @@
               </span>
               <span class="modal-wrapper">
                 <button class="modal-counter-button minus" type="button"></button>
-                <input class="modal-search-field" type="number" id="kids-number" name="search-kids-number" placeholder="1">
+                <input class="modal-search-field" type="number" id="kids-number" name="search-kids-number" placeholder="1" required>
                 <button class="modal-counter-button plus" type="button"></button>
               </span>
             </p>
